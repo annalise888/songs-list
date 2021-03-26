@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JSON Song List</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+	
+	<form>
+		<label for="genre">Genre:</label>
+		<select id="genre">
+			<option id="all">All</option>
+			<option id="funk">Funk</option>
+			<option id="rnbsoul">Soul</option>
+			<option id="neosoul">Neo Soul</option>
+			<option id="indie">Indie</option>
+			<option id="hiphop">Hip-Hop/Rap</option>
+		</select>
+		<button id= "filterbtn" onclick="writeSongList();">Filter</button>
+		<br><br>
+		
+		<script language="javascript">
+			document.getElementById("filterbtn").addEventListener("click",function(event){
+				event.preventDefault();
+			})
+		</script>
+	</form>
+	
+	<div id="songlist">
+		<script language = "javascript">
+			
+			window.onload = writeSongList();
+			
+			function writeSongList() {
+				var selected_genre_id = $("#genre option:selected").attr("id");
+				var selected_genre = document.getElementById(selected_genre_id).value;
+				
+				$.get("https://annalise888.github.io/songs-list/songs.json",
+				function(data) {
+					strHTML="";
+					data.forEach(function(song) {
+						
+						//check if genre is selected
+						if (selected_genre == "All") {
+							strHTML += writeSong(song.title,song.artist,song.genre,song.year);
+						} else {
+							for (i=0;i<(song.genre).length;i++){
+								if (song.genre[i] == selected_genre) {
+									strHTML += writeSong(song.title,song.artist,song.genre,song.year);
+								}
+							}
+						}
+					})
+					document.getElementById("songlist").innerHTML=strHTML;
+				})	  
+			}
+			
+			function writeSong(title,artist,genre,year) {
+				str = "";
+				str += "<strong>" + title + "</strong><br>";
+				str += "Artist: " + artist + "<br>";
+				str += "Genre: ";
+				for (i=0;i<genre.length;i++) {
+					str +=genre[i];
+					if (i != genre.length-1) {
+						str += ", ";
+					}
+				}
+				str += "<br>" + "Release date: " + year;
+				str += "<br><hr><br>";
+				return str;
+			}
+			
+			
+		</script>
+		
+	</div>
+	
+	
+</body>
+</html>
