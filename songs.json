@@ -1,12 +1,12 @@
 [
-		{"artist":"Childish Gambino", "title":"Redbone","genre":["Funk","Soul"], "year":"2016"},
-		{"artist":"Daniel Caesar, Kali Uchis", "title":"Get You","genre":["Soul"], "year":"2016"},
-		{"artist":"Biig Piig", "title":"Perdida","genre":["Neo Soul","Soul","Indie"], "year":"2018"},
-		{"artist":"Frank Ocean", "title":"Pyramids","genre":["Neo Soul","Soul"], "year":"2012"},
-		{"artist":"Durand Bernarr", "title":"Melody","genre":["Soul"], "year":"2018"},
-		{"artist":"Masego, Don Toliver", "title":"Mystery Lady","genre":["Soul"], "year":"2020"},
+		{"artist":"Childish Gambino", "title":"Redbone","genre":["Funk","R&B/Soul"], "year":"2016"},
+		{"artist":"Daniel Caesar, Kali Uchis", "title":"Get You","genre":["R&B/Soul"], "year":"2016"},
+		{"artist":"Biig Piig", "title":"Perdida","genre":["Neo Soul","R&B/Soul","Indie"], "year":"2018"},
+		{"artist":"Frank Ocean", "title":"Pyramids","genre":["Neo Soul","R&B/Soul"], "year":"2012"},
+		{"artist":"Durand Bernarr", "title":"Melody","genre":["R&B/Soul"], "year":"2018"},
+		{"artist":"Masego, Don Toliver", "title":"Mystery Lady","genre":["R&B/Soul"], "year":"2020"},
 		{"artist":"Kendrick Lamar", "title":"PRIDE.","genre":["Hip-Hop/Rap"], "year":"2017"},
 		{"artist":"Childish Gambino", "title":"Lights Turned On","genre":["Hip-Hop/Rap"], "year":"2011"},
 		{"artist":"Raphael Saadiq", "title":"Good Man","genre":["Neo Soul"], "year":"2011"},
-		{"artist":"Lianne La Havas", "title":"Please Don't Make Me Cry","genre":["Neo Soul","Soul"], "year":"2020"}
+		{"artist":"Lianne La Havas", "title":"Please Don't Make Me Cry","genre":["Neo Soul","R&B/Soul"], "year":"2020"}
 ]
